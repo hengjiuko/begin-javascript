@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>DOM基础</title>
+	<style>
+		.one{color:red;}
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		元素
+	</div>
+	<ul id="list1">
+		<li>前端</li>
+		<li>后端</li>
+		<li>UI设计</li>
+	</ul>
+	<ol>
+		<li>技术</li>
+		<li>操作</li>
+	</ol>
+	<script>
+		var boxs=document.getElementById("box");
+		boxs.style.color="red";
+		
+        var lis=document.getElementById("list1").getElementsByTagName("li");
+        for(var i=0,len=lis.length;i<len;i++)
+        {
+        	lis[i].style.color="gray";
+        	if(i==0){
+        		lis[i].style.backgroundColor="#ccc";
+        	}
+        	else if(i==1){
+        		lis[i].style.backgroundColor="white";
+        	}
+        	else{
+        		lis[i].style.backgroundColor="#999";
+        	}
+        }
+        for(var i=0,len=lis.length;i<len;i++)
+        {
+        	console.log(lis[i].innerHTML);
+        	lis[i].innerHTML+="程序";
+        	lis[1].className="one";
+        	
+        }
+        console.log(document.getElementById("box").className);
+
+	</script>
+</body>
+</html>

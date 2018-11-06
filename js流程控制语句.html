@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>js的流程控制语句</title>
+</head>
+<body>
+	<script>
+		var age=15;
+		if(age<18)
+		{
+			alert("您还没有成年")
+		}
+		var age=prompt("请输入您的年龄")
+		if(age<18)
+		{
+			alert("您没有成年");
+		}
+		else{
+			alert("您已成年")
+		}
+		var week=new Date().getDay(),weekstr;
+		console.log(week);
+		switch(week)
+        {
+        	case 0:weekstr="日";
+        	break;
+        	case 1:weekstr="一";
+        	break;
+        	case 2:weekstr="二";
+        	break;
+        	case 3:weekstr="三";
+        	break;
+        	case 4:weekstr="四";
+        	break;
+        	case 5:weekstr="五";
+        	break;
+        	default:weekstr="六";
+        }
+        document.write("今天是星期"+weekstr)
+	</script>
+</body>
+</html>
